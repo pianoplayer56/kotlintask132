@@ -1,8 +1,6 @@
 fun countTax(card: String = "Vk Pay", lastTransfers: Int = 0, currentTransfer: Int): Double? =
     when (card) {
-        "Vk Pay" -> if (lastTransfers + currentTransfer >= 40_000_00
-            || currentTransfer >= 15_000_00
-        ) null else 0.0
+        "Vk Pay" ->  0.0
 
         "Master Card", "Maestro" -> if (currentTransfer < 75_000_00) 0.0
         else currentTransfer * 0.006 + 20_00
