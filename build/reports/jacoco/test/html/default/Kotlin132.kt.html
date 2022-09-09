@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Kotlin132.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Kotlin132</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Kotlin132.kt</span></div><h1>Kotlin132.kt</h1><pre class="source lang-java linenums"><span class="fc" id="L1">fun countTax(card: String = &quot;Vk Pay&quot;, lastTransfers: Int = 0, currentTransfer: Int): Double? =</span>
+<span class="fc bfc" id="L2" title="All 4 branches covered.">    when (card) {</span>
+<span class="fc" id="L3">        &quot;Vk Pay&quot; -&gt;  0.0</span>
+
+<span class="fc bfc" id="L5" title="All 2 branches covered.">        &quot;Master Card&quot;, &quot;Maestro&quot; -&gt; if (currentTransfer &lt; 75_000_00) 0.0</span>
+<span class="fc" id="L6">        else currentTransfer * 0.006 + 20_00</span>
+
+<span class="fc bfc" id="L8" title="All 2 branches covered.">        &quot;Visa&quot;, &quot;РњРёСЂ&quot; -&gt; if (currentTransfer * 0.0075 &lt; 35_00) 35_00.0</span>
+<span class="fc" id="L9">        else currentTransfer * 0.0075</span>
+
+<span class="fc" id="L11">        else -&gt; null</span>
+<span class="fc" id="L12">    }</span>
+
+fun isInLimit(card: String, lastTransfers: Int, currentTransfer: Int): Boolean =
+<span class="fc bfc" id="L15" title="All 4 branches covered.">    if (card == &quot;Vk Pay&quot;) (lastTransfers + currentTransfer &lt; 40_000_00</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">            &amp;&amp; currentTransfer &lt; 15_000_00)</span>
+<span class="fc bfc" id="L17" title="All 4 branches covered.">    else lastTransfers + currentTransfer &lt; 600_000_00 &amp;&amp; currentTransfer &lt; 150_000_00</span>
+
+fun main() {
+<span class="nc" id="L20">    println(&quot;Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї РїР»Р°С‚РµР¶РЅРѕР№ СЃРёСЃС‚РµРјС‹&quot;)</span>
+<span class="nc" id="L21">    val card = readln()</span>
+<span class="nc" id="L22">    println(&quot;Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ РѕРїРµСЂР°С†РёР№ Р·Р° С‚РµРєСѓС‰РёР№ РјРµСЃСЏС†&quot;)</span>
+<span class="nc" id="L23">    val lastTransfers = readln().toInt() * 100</span>
+<span class="nc" id="L24">    println(&quot;Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ РїРµСЂРµРІРѕРґР°&quot;)</span>
+<span class="nc" id="L25">    val currentTransfer = readln().toInt() * 100</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">    if (isInLimit(card, lastTransfers, currentTransfer)) {</span>
+<span class="nc" id="L27">        println(</span>
+<span class="nc" id="L28">            &quot;Р Р°Р·РјРµСЂ РєРѕРјРёСЃСЃРёРё : ${</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">                countTax(card, lastTransfers, currentTransfer)?.div(100)</span>
+<span class="nc" id="L30">                    ?: &quot;РїРµСЂРµРІРѕРґ СЃСЂРµРґСЃС‚РІ РЅРµРІРѕР·РјРѕР¶РµРЅ&quot;</span>
+            } &quot;
+        )
+    } else {
+<span class="nc" id="L34">        println(&quot;РќРµРІРѕР·РјРѕР¶РЅРѕ РїСЂРѕРёР·РІРµСЃС‚Рё РѕРїРµСЂР°С†РёСЋ.&quot;)</span>
+    }
+<span class="nc" id="L36">}</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

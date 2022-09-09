@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testing.countTaxTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-09-09T15:41:05" hostname="WIN-VQOOBFB7H3C" time="0.002">
+  <properties/>
+  <testcase name="countVisaMore35_00TaxTest" classname="testing.countTaxTest" time="0.0"/>
+  <testcase name="countVkPayTaxTest" classname="testing.countTaxTest" time="0.001"/>
+  <testcase name="countMaestroLess75_000TaxTest" classname="testing.countTaxTest" time="0.0"/>
+  <testcase name="countIncorrectCardTaxTest" classname="testing.countTaxTest" time="0.0"/>
+  <testcase name="countVkPayDefaultTaxTest" classname="testing.countTaxTest" time="0.0"/>
+  <testcase name="countMasterCardLess75_000TaxTest" classname="testing.countTaxTest" time="0.001"/>
+  <testcase name="countMirTaxTest" classname="testing.countTaxTest" time="0.0"/>
+  <testcase name="countMaestroMore75_000TaxTest" classname="testing.countTaxTest" time="0.0"/>
+  <testcase name="countVisaLess35_00TaxTest" classname="testing.countTaxTest" time="0.0"/>
+  <testcase name="countMasterCardMore75_000TaxTest" classname="testing.countTaxTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

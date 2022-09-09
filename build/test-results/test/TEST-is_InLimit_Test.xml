@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="is_InLimit_Test" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-09-09T15:41:05" hostname="WIN-VQOOBFB7H3C" time="0.01">
+  <properties/>
+  <testcase name="isInLimitVisaLastTransferFalse" classname="is_InLimit_Test" time="0.007"/>
+  <testcase name="isInLimitVisaFalse" classname="is_InLimit_Test" time="0.001"/>
+  <testcase name="isInLimitVkPayLastTransferFalse" classname="is_InLimit_Test" time="0.0"/>
+  <testcase name="isInLimitVkPayCurrentTransferFalse" classname="is_InLimit_Test" time="0.0"/>
+  <testcase name="isInLimitVkPayTrue" classname="is_InLimit_Test" time="0.0"/>
+  <testcase name="isInLimitVisaCurrentTransferFalse" classname="is_InLimit_Test" time="0.0"/>
+  <testcase name="isInLimitVisaTrue" classname="is_InLimit_Test" time="0.001"/>
+  <testcase name="isInLimitVkPayFalse" classname="is_InLimit_Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
